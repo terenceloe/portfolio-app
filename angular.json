@@ -24,6 +24,8 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/font-awesome/css/font-awesome.css",
+              "node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -88,7 +90,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/font-awesome/css/font-awesome.css",
+              "node_modules/bootstrap/dist/css/bootstrap.css"
             ],
             "scripts": []
           }
@@ -119,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "portfolio-app"
+    }
+  },
+  "defaultProject": "portfolio-app",
+  "cli": {
+    "analytics": "d966cd71-53a0-4e4e-aaf4-ac593d40ce00"
+  }
 }

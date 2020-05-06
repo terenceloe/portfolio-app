@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+        <div class="col d-flex justify-content-center mb-3">
+            <button
+            *ngFor="let keySkill of keySkills"
+            (click)="toogleSkillSelection(keySkill)"
+            [disabled]="disableIfOneBtn(keySkill)"
+            [ngClass]="{'disabled':!keySkill.isSelected}"
+            class="btn btn-primary">
+            {{keySkill.displayName}}
+        </button>
+        </div>
+    </div>
+</div>
