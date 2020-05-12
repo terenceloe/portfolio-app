@@ -1,0 +1,5 @@
+
+<app-project-card class="card col-md-4 m-1" *ngFor="let project of getStream() | async" [project]="project">
+</app-project-card>
+
+<app-select-button *ngFor="let tag of tagData" [ngClass]="{'active': filteredTags.includes(tag)}" [tagName]="tag" (tagNameChange)="filter($event)"></app-select-button>

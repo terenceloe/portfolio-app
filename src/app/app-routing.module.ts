@@ -4,13 +4,15 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
+import { ProjectComponent } from './generic/components/project/project.component';
 
 
 const routes: Routes = [
   {path: '', component: LandingPageComponent},
   {path: 'portfolio', component: PortfolioComponent},
   {path: 'about', component: AboutComponent},
-  {path: 'profiles', component: ContactComponent}
+  {path: 'profiles', component: ContactComponent},
+  {path: "test", component: ProjectComponent}
 ];
 
 @NgModule({

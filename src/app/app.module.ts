@@ -17,6 +17,8 @@ import { ProjectDetailsComponent } from './project-details/project-details.compo
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { SkillsService } from './services/skills.service';
+import { GenericTagService } from './generic/services/generic-tag.service';
+import { GenericModule } from './generic/generic.module';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { SkillsService } from './services/skills.service';
     BrowserModule,
     BrowserAnimationsModule,
     NoopAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    GenericModule
   ],
   providers: [
     ProjectDataService,
