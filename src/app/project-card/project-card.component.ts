@@ -9,7 +9,6 @@ import { IProject } from '../utils/IProject';
 export class ProjectCardComponent implements OnInit {
   @Input('project') project: IProject;
   @Output('select') select = new EventEmitter();
-  projects: IProject[];
   
   constructor() { }
 

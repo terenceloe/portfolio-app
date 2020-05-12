@@ -7,10 +7,9 @@
     </app-project-details>
 </div> -->
 
-<div class="container">
-    <div class="row">
-        <app-project-card class="card col-4 p-1" *ngFor="let project of projects" [project]="project" (select)="onProjectCardClick($event)">
-        </app-project-card>
-    </div>
-</div>
 
+<div class="container">
+<app-project-card class="card col-md-4 m-1" *ngFor="let project of projects" [project]="project"
+    (select)="onProjectCardClick($event)">
+</app-project-card>
+</div>

@@ -10,7 +10,7 @@ import { ProjectDataService } from '../services/project-data.service';
 })
 export class ProjectsComponent implements OnInit, OnDestroy {
   projects: IProject[];
-  tagSubscription: EventEmitter<any>;
+  tagSubscription$: EventEmitter<any>;
   selectedProject: IProject;
 
 
@@ -20,10 +20,10 @@ export class ProjectsComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit() {
-    console.log('project component created');
+    // console.log('project component created');
     this.renderProjects();
-    this.tagSubscription = this.tagsService.onTagUpdate;
-    this.tagSubscription.subscribe(() => {
+    this.tagSubscription$ = this.tagsService.onTagUpdate;
+    this.tagSubscription$.subscribe(() => {
       if (this.projects.length === 0) this.renderProjects();
       else this.projects = [];
     });

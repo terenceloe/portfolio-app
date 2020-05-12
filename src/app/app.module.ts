@@ -14,6 +14,9 @@ import { ProjectCardComponent } from './project-card/project-card.component';
 import { ProjectDataService } from './services/project-data.service';
 import { TagsService } from './services/tags.service';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { SkillsService } from './services/skills.service';
 
 @NgModule({
   declarations: [
@@ -26,6 +29,8 @@ import { ProjectDetailsComponent } from './project-details/project-details.compo
     ProjectsComponent,
     ProjectCardComponent,
     ProjectDetailsComponent,
+    AboutComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +40,8 @@ import { ProjectDetailsComponent } from './project-details/project-details.compo
   ],
   providers: [
     ProjectDataService,
-    TagsService
+    TagsService,
+    SkillsService
   ],
   bootstrap: [AppComponent]
 })

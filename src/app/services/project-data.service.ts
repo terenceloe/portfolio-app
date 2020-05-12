@@ -2,9 +2,7 @@ import { Injectable } from '@angular/core';
 import { ALL_PROJECT_DATA } from '../utils/project-data';
 import { IProject } from '../utils/IProject';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ProjectDataService {
 
   constructor() { }

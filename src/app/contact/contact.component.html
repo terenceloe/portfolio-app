@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="row justify-content-center mb-5">
+        <div class="col-md-block bg-white">
+            <div class="d-none d-block text-primary">
+                <h1 class="display-5">CONTACT & PROFILES</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-auto bg-dark p-2">
+            <div class="d-flex flex-row justify-content-around align-items-center p-1">
+                <a [href]="profileLinks.url" target="_blank" *ngFor="let profileLinks of contactProfile.profile"
+                    class="btn btn-primary m-3">
+                    <img [title]="profileLinks.name" [src]="profileLinks.iconUrl" [alt]="profileLinks.name"
+                        class="img-fluid">
+                    <span class="d-none d-block text-white">{{profileLinks.name}}</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-md-auto bg-dark p-2">
+            <div class="d-flex flex-row justify-content-center align-items-center p-1">
+                <a [href]="dotaBuff.url" target="_blank" class="btn btn-primary text-center">
+                    <img [title]="dotaBuff.name" [src]="dotaBuff.iconUrl" [alt]="dotaBuff.name" class="img-fluid">
+                    <span class="d-none d-block text-dark">{{dotaBuff.name}}</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-auto bg-dark text-white p-2">
+            <div class="d-flex flex-column justify-content-center align-items-center p-1">
+                <a [href]="email.url" target="_blank" class="btn btn-primary  text-center">
+                    <img [title]="email.name" [src]="email.iconUrl" [alt]="email.name" class="img-fluid">
+                </a>
+                <!-- <p>{{email.url.replace('mailto:', '')}}</p> -->
+                <span class="d-none d-block">{{email.url.replace('mailto:', '')}}</span>
+            </div>
+        </div>
+        <div class="col-md-auto bg-dark text-white p-2">
+            <div class="d-flex flex-row justify-content-around align-items-center p-1">
+                <a [href]="workProfile.url" target="_blank" *ngFor="let workProfile of contactProfile.work"
+                    class="btn btn-primary m-3">
+                    <img [title]="workProfile.name" [src]="workProfile.iconUrl" [alt]="workProfile.name"
+                        class="img-fluid">
+                    <span class="d-none d-block">{{workProfile.name}}</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
