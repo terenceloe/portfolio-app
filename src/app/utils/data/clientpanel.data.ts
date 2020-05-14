@@ -14,11 +14,19 @@ export const ClientpanelData: IProject = {
          'Settings function',
          'Firebase as backend'
      ],
-     tags: ['Bootstrap', 'Angular'],
+     tags: ['Bootstrap', 'Angular', 'Typescript'],
      techStuff: [
          'Angular 9',
          'Bootstrap 4',
          'Jquery, popper.js, font-awesome'
      ],
-     additionalData: []
+     additionalData: [
+         {
+             title: 'About',
+             data: [
+                 'This is my first project with Firebase',
+                 'Actually i developed this just for my private use :)'
+             ]
+         }
+     ]
 }

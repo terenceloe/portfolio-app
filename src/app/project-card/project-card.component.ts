@@ -1,5 +1,7 @@
-import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, Input, EventEmitter, ViewChild, TemplateRef } from '@angular/core';
 import { IProject } from '../utils/IProject';
+import { BsModalService } from 'ngx-bootstrap/modal';
+import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 
 @Component({
   selector: 'app-project-card',
@@ -9,8 +11,10 @@ import { IProject } from '../utils/IProject';
 export class ProjectCardComponent implements OnInit {
   @Input('project') project: IProject;
   @Output('select') select = new EventEmitter();
+
+  modalRef: BsModalRef;
   
-  constructor() { }
+  constructor(private modalService: BsModalService) { }
 
   ngOnInit(): void {
   }
@@ -19,4 +23,9 @@ export class ProjectCardComponent implements OnInit {
     this.select.emit({ project });
   }
 
+  openModal(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template,{ backdrop: 'static', keyboard: false });
+  }
+  
+  
 }

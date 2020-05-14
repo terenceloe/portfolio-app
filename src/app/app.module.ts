@@ -17,6 +17,10 @@ import { ProjectDetailsComponent } from './project-details/project-details.compo
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { SkillsService } from './services/skills.service';
+import { GenericModule } from './generic/generic.module';
+import { GenericTagService } from './generic/services/generic-tag.service';
+import { ModalModule, BsModalRef } from 'ngx-bootstrap/modal';
+
 
 @NgModule({
   declarations: [
@@ -26,8 +30,6 @@ import { SkillsService } from './services/skills.service';
     HomeComponent,
     PortfolioComponent,
     KeySkillBtnsComponent,
-    ProjectsComponent,
-    ProjectCardComponent,
     ProjectDetailsComponent,
     AboutComponent,
     ContactComponent,
@@ -36,12 +38,16 @@ import { SkillsService } from './services/skills.service';
     BrowserModule,
     BrowserAnimationsModule,
     NoopAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    GenericModule,
+    ModalModule.forRoot()
   ],
   providers: [
     ProjectDataService,
     TagsService,
-    SkillsService
+    SkillsService,
+    GenericTagService,
+    BsModalRef
   ],
   bootstrap: [AppComponent]
 })

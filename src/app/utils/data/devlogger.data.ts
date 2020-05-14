@@ -14,7 +14,7 @@ export const DevloggerData: IProject = {
          'Store Functionality via Local Storage',
          'Responsive UI'
      ],
-     tags: ['Bootstrap', 'Angular'],
+     tags: ['Bootstrap', 'Angular', 'Typescript'],
      techStuff: [
          'Angular 9',
          'Bootstrap 4',

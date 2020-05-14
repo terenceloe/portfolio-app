@@ -2,50 +2,41 @@ import { Component, OnInit, OnDestroy, EventEmitter } from '@angular/core';
 import { IProject } from '../utils/IProject';
 import { TagsService } from '../services/tags.service';
 import { ProjectDataService } from '../services/project-data.service';
+import { GenericTagService } from '../generic/services/generic-tag.service';
+import { BehaviorSubject } from 'rxjs';
+import { ALL_PROJECT_DATA } from '../utils/project-data';
 
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.scss']
+  styleUrls: ['./projects.component.css']
 })
-export class ProjectsComponent implements OnInit, OnDestroy {
-  projects: IProject[];
-  tagSubscription$: EventEmitter<any>;
-  selectedProject: IProject;
+export class ProjectsComponent implements OnInit {
+  projects: BehaviorSubject<IProject[]> = this.projectService.subject;
+  filteredProjects: BehaviorSubject<IProject[]> = this.projectService.filteredSubjects;
+  
+  tagData = [
+    "Angular",
+    "Java",
+    "Bootstrap",
+    "Typescript",
+    "Others"
+  ]
 
+  filteredTags = [];
 
-  constructor(
-    private tagsService: TagsService,
-    private projectService: ProjectDataService
-  ) { }
+  constructor(private projectService: GenericTagService<IProject>) { }
 
-  ngOnInit() {
-    // console.log('project component created');
-    this.renderProjects();
-    this.tagSubscription$ = this.tagsService.onTagUpdate;
-    this.tagSubscription$.subscribe(() => {
-      if (this.projects.length === 0) this.renderProjects();
-      else this.projects = [];
-    });
+  ngOnInit(): void {
+    this.projectService.add(ALL_PROJECT_DATA);
   }
 
-  ngOnDestroy() {
-    // console.log('project component destroyed');
+  filter(tag) {
+    this.filteredTags.includes(tag) ? this.filteredTags = this.filteredTags.filter(x => x !== tag) : this.filteredTags.push(tag);
+    this.filteredTags.length < 1?  this.projectService.filterReset() : this.projectService.filter(this.filteredTags);
   }
 
-  onProjectCardClick(data) {
-    this.selectedProject = data.project;
-  }
-
-  renderProjects() {
-    this.projects = this.projectService
-      .getProjects()
-      .filter(project => this.tagsService.tags
-        .filter(tag => tag.isSelected)
-        .reduce(
-          (prev, tag) =>
-            prev || project.tags.indexOf(tag.displayName.toLowerCase()) !== -1, false
-        )
-      );
+  getStream() {
+    return this.filteredProjects.value === null? this.projects : this.filteredProjects;
   }
 }
