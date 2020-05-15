@@ -2,7 +2,7 @@ import { IProject } from '../IProject';
 
 export const PortfolioData: IProject = {
     id: '004',
-    name: 'Portfolio',
+    name: 'Portfolio-App',
     description: 
      'A simple web portfolio (which is this website)',
      projectLink: 'https://github.com/terenceloe/portfolio-app',

@@ -47,7 +47,7 @@ export class ContactComponent implements OnInit {
     iconUrl: './assets/icons/envelope.svg'
   };
 
-  dotaBuff = {
+  Instagram = {
     name: 'Instagram',
     url: '',
     iconUrl: './assets/icons/insta.svg'
