@@ -1,7 +1,5 @@
 import { Component, OnInit, OnDestroy, EventEmitter } from '@angular/core';
 import { IProject } from '../utils/IProject';
-import { TagsService } from '../services/tags.service';
-import { ProjectDataService } from '../services/project-data.service';
 import { GenericTagService } from '../generic/services/generic-tag.service';
 import { BehaviorSubject } from 'rxjs';
 import { ALL_PROJECT_DATA } from '../utils/project-data';

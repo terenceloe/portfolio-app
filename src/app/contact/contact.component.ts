@@ -48,9 +48,9 @@ export class ContactComponent implements OnInit {
   };
 
   dotaBuff = {
-    name: 'DotaBuff',
-    url: 'https://www.dotabuff.com/players/149278785',
-    iconUrl: './assets/icons/dota.svg'
+    name: 'Instagram',
+    url: '',
+    iconUrl: './assets/icons/insta.svg'
   }
   
   ngOnInit(): void {

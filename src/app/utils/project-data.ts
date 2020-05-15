@@ -1,15 +1,17 @@
-import { DevloggerData } from "./data/devlogger.data"
-import { ClientpanelData } from "./data/clientpanel.data"
-import { CrudJavaData } from "./data/crud-java.data"
+import { DevloggerData } from "./data/devlogger.data";
+import { ClientpanelData } from "./data/clientpanel.data";
+import { CrudJavaData } from "./data/crud-java.data";
 import { environment } from 'src/environments/environment';
 import { testUniqueness } from './utils';
 import { IProject } from './IProject';
+import { PortfolioData } from './data/portfolio.data';
 
 const getAllProject = () => {
     const projects = [
         DevloggerData,   
         CrudJavaData,
-        ClientpanelData    
+        ClientpanelData,
+        PortfolioData    
     ];
 
     if (!environment.production) {
