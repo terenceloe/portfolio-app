@@ -10,17 +10,12 @@ import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 })
 export class ProjectCardComponent implements OnInit {
   @Input('project') project: IProject;
-  @Output('select') select = new EventEmitter();
 
   modalRef: BsModalRef;
   
   constructor(private modalService: BsModalService) { }
 
   ngOnInit(): void {
-  }
-
-  onCardClick(project: IProject) {
-    this.select.emit({ project });
   }
 
   openModal(template: TemplateRef<any>) {
