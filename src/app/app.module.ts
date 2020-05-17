@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  BrowserAnimationsModule,
+  NoopAnimationsModule,
+} from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,8 +20,6 @@ import { GenericTagService } from './generic/services/generic-tag.service';
 import { ModalModule, BsModalRef } from 'ngx-bootstrap/modal';
 import { PopoverModule } from 'ngx-bootstrap/popover';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,18 +33,13 @@ import { PopoverModule } from 'ngx-bootstrap/popover';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    NoopAnimationsModule,
+
     AppRoutingModule,
     GenericModule,
     ModalModule.forRoot(),
-    PopoverModule.forRoot()
+    PopoverModule.forRoot(),
   ],
-  providers: [
-    ProjectDataService,
-    SkillsService,
-    GenericTagService,
-    BsModalRef
-  ],
-  bootstrap: [AppComponent]
+  providers: [ProjectDataService, SkillsService, GenericTagService, BsModalRef],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
