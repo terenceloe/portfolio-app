@@ -32,7 +32,6 @@ import { PopoverModule } from 'ngx-bootstrap/popover';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    NoopAnimationsModule,
     AppRoutingModule,
     GenericModule,
     ModalModule.forRoot(),

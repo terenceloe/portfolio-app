@@ -54,13 +54,6 @@ import { trigger, transition, query, style, stagger, animate, keyframes, animate
         )
       ])
     ]),
-
-    trigger('animateChildren', [
-      transition('* => *', [
-        query('@*, :enter', [animateChild()], { optional: true }),
-        query('@*, :leave', [animateChild()], { optional: true })
-      ])
-    ])
   ]
 })
 export class ProjectsComponent implements OnInit {

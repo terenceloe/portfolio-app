@@ -7,10 +7,10 @@ import { ContactComponent } from './contact/contact.component';
 
 
 const routes: Routes = [
-  {path: '', component: LandingPageComponent, pathMatch:'full', data: { routeIdx: 0 }},
-  {path: 'portfolio', component: PortfolioComponent, data: { routeIdx: 1 }},
-  {path: 'about', component: AboutComponent, data: { routeIdx: 2 }},
-  {path: 'profiles', component: ContactComponent, data: { routeIdx: 3 }}
+  {path: '', component: LandingPageComponent, pathMatch:'full', data: { animation: 'LandingPage' } },
+  {path: 'portfolio', component: PortfolioComponent, data: { animation: 'FilterPage' }},
+  {path: 'about', component: AboutComponent, data: { animation: 'AboutPage' }},
+  {path: 'profiles', component: ContactComponent, data: { animation: 'ProfilePage' }}
 ];
 
 @NgModule({

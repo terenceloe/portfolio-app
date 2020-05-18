@@ -3,7 +3,7 @@
         (tagNameChange)="filter($event)"></app-select-button>
 </div>
 
-<div class="row">
-    <app-project-card [@slideIn] class="col-sm-6 p-1" *ngFor="let project of getStream() | async" [project]="project">
+<div [@slideIn]="(getStream() | async)?.length" class="row">
+    <app-project-card  class="col-sm-6 p-1" *ngFor="let project of getStream() | async" [project]="project">
     </app-project-card>
 </div>
