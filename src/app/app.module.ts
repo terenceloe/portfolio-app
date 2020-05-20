@@ -16,6 +16,7 @@ import { GenericModule } from './generic/generic.module';
 import { GenericTagService } from './generic/services/generic-tag.service';
 import { ModalModule, BsModalRef } from 'ngx-bootstrap/modal';
 import { PopoverModule } from 'ngx-bootstrap/popover';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -28,6 +29,7 @@ import { PopoverModule } from 'ngx-bootstrap/popover';
     PortfolioComponent,
     AboutComponent,
     ContactComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

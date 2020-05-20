@@ -1,4 +1,7 @@
-<app-navbar></app-navbar>
-<div [@routeAnimations]="prepareRoute(outlet)">
-    <router-outlet #outlet="outlet"></router-outlet>
+<div class="image">
+    <app-navbar></app-navbar>
+    <div [@routeAnimations]="prepareRoute(outlet)">
+        <router-outlet #outlet="outlet"></router-outlet>
+    </div>
+    <app-footer></app-footer>
 </div>

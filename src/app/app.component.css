@@ -1,0 +1,6 @@
+.image{
+    height:61em;
+    background-size:cover; 
+    width:auto;
+    background-image:url('src\assets\img\bg-pink.jpg');
+  }
