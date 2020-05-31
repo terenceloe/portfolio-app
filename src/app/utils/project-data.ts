@@ -5,13 +5,15 @@ import { environment } from 'src/environments/environment';
 import { testUniqueness } from './utils';
 import { IProject } from './IProject';
 import { PortfolioData } from './data/portfolio.data';
+import { FitnessTrackerData } from "./data/fitness-tracker.data";
 
 const getAllProject = () => {
     const projects = [
         DevloggerData,   
         CrudJavaData,
         ClientpanelData,
-        PortfolioData    
+        PortfolioData,  
+        FitnessTrackerData  
     ];
 
     if (!environment.production) {

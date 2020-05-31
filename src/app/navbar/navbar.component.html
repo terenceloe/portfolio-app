@@ -1,16 +1,38 @@
-    <nav class="navbar navbar-expand-sm navbar-dark bg-danger mb-5">
-        <div class="container">
-            <a class="navbar-brand" routerLink="/">Home</a>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a routerLink="/portfolio" class="nav-link">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/about">About & Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" routerLink="/profiles">Profiles</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<!-- <nav class="navbar navbar-expand-sm navbar-dark bg-danger mb-5">
+    <div class="container">
+        <a class="navbar-brand" routerLink="/">Home</a>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a routerLink="/portfolio" class="nav-link">Portfolio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/about">About & Skills</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/profiles">Profiles</a>
+            </li>
+        </ul>
+    </div>
+</nav> -->
+
+<mat-toolbar class="mb-5" color="primary">
+    <div class="fxHide.gt-xs">
+        <button mat-icon-button (click)="onToggleSidenav()">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </div>
+    <div><a routerLink="/">Home</a></div>
+    <div fxFlex fxLayout fxLayoutAlign="flex-end" fxHide.xs>
+        <ul fxLayout fxLayoutGap="10px" class="navigation-items">
+            <li>
+                <a routerLink="/portfolio">Portfolio</a>
+            </li>
+            <li>
+                <a routerLink="/about">About & Skills</a>
+            </li>
+            <li>
+                <a routerLink="/profiles">Profiles</a>
+            </li>
+        </ul>
+    </div>
+</mat-toolbar>

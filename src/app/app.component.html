@@ -1,7 +1,14 @@
-<div class="image">
-    <app-navbar></app-navbar>
-    <div [@routeAnimations]="prepareRoute(outlet)">
-        <router-outlet #outlet="outlet"></router-outlet>
-    </div>
-    <app-footer></app-footer>
-</div>
+<mat-sidenav-container>
+    <mat-sidenav class="bg-warning" #sidenav role="navigation" mode="push">
+        <app-sidenav-list (closeSidenav)="sidenav.close()"></app-sidenav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="image">
+            <app-navbar (sidenavToggle)="sidenav.toggle()"></app-navbar>
+            <div [@routeAnimations]="prepareRoute(outlet)">
+                <router-outlet #outlet="outlet"></router-outlet>
+            </div>
+            <app-footer></app-footer>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

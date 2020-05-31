@@ -1,7 +1,6 @@
-import { Component, OnInit, Output, Input, EventEmitter, ViewChild, TemplateRef } from '@angular/core';
+import { Component, OnInit, Output, Input, EventEmitter, ViewChild, TemplateRef, Inject } from '@angular/core';
 import { IProject } from '../utils/IProject';
-import { BsModalService } from 'ngx-bootstrap/modal';
-import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-project-card',
@@ -10,17 +9,30 @@ import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
 })
 export class ProjectCardComponent implements OnInit {
   @Input('project') project: IProject;
-
-  modalRef: BsModalRef;
   
-  constructor(private modalService: BsModalService) { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
 
-  openModal(template: TemplateRef<any>) {
-    this.modalRef = this.modalService.show(template,{ backdrop: 'static', keyboard: false });
+  openDialog() {
+    const dialogRef = this.dialog.open(DialogContent, {
+      data: {
+        project: this.project
+      }
+    });
+
   }
-  
-  
+}
+
+@Component({
+  selector: 'dialog-content',
+  templateUrl: './dialog-content.component.html',
+})
+export class DialogContent implements OnInit {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any) {}
+
+  ngOnInit() {
+    console.log(this.data);
+  }
 }

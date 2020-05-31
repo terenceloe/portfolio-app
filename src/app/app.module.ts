@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { FlexLayoutModule } from "@angular/flex-layout";
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +19,9 @@ import { GenericTagService } from './generic/services/generic-tag.service';
 import { ModalModule, BsModalRef } from 'ngx-bootstrap/modal';
 import { PopoverModule } from 'ngx-bootstrap/popover';
 import { FooterComponent } from './footer/footer.component';
+import { MaterialModule } from './material.module';
+import { SidenavListComponent } from './navbar/sidenav-list/sidenav-list.component';
+
 
 
 
@@ -30,6 +35,7 @@ import { FooterComponent } from './footer/footer.component';
     AboutComponent,
     ContactComponent,
     FooterComponent,
+    SidenavListComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +43,9 @@ import { FooterComponent } from './footer/footer.component';
     AppRoutingModule,
     GenericModule,
     ModalModule.forRoot(),
-    PopoverModule.forRoot()
+    PopoverModule.forRoot(),
+    MaterialModule,
+    FlexLayoutModule
   ],
   providers: [
     ProjectDataService,

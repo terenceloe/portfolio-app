@@ -6,14 +6,11 @@
             {{ project.description }}
         </p>
 
-        <!-- MODAL TRIGGER -->
-        <button type="button" class="btn 
-        btn-primary" (click)="openModal(template)">
-            More Details
-        </button>
+
+        <button class="btn btn-primary" (click)="openDialog()">More Details</button>
 
         <!-- DETAILS MODAL -->
-        <ng-template class="modal" #template>
+        <!-- <ng-template class="modal" #template>
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -59,6 +56,6 @@
                     </div>                    
                 </div>
             </div>
-        </ng-template>
+        </ng-template> -->
     </div>
 </div>
