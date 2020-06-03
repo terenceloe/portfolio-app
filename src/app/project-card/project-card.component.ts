@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, Input, EventEmitter, ViewChild, TemplateRef, Inject } from '@angular/core';
+import { Component, OnInit, Input, Inject } from '@angular/core';
 import { IProject } from '../utils/IProject';
 import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
@@ -8,7 +8,7 @@ import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
   styleUrls: ['./project-card.component.css']
 })
 export class ProjectCardComponent implements OnInit {
-  @Input('project') project: IProject;
+  @Input() project: IProject;
   
   constructor(public dialog: MatDialog) { }
 
@@ -27,7 +27,7 @@ export class ProjectCardComponent implements OnInit {
 
 @Component({
   selector: 'dialog-content',
-  templateUrl: './dialog-content.component.html',
+  templateUrl: './dialog-content.html',
 })
 export class DialogContent implements OnInit {
   constructor(@Inject(MAT_DIALOG_DATA) public data: any) {}

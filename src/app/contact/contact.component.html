@@ -1,25 +1,29 @@
 <div class="container">
-    <div class="row justify-content-center mb-5">
+    <!-- <div class="row justify-content-center mb-5">
             <div class="d-none d-block text-primary">
                 <h1>CONTACT & PROFILES</h1>
             </div>
+    </div> -->
+    <div class="mb-4" fxLayout="row" fxLayoutAlign="center center">
+        <h2 class="mat-title">CONTACT & PROFILES</h2>
+
     </div>
 </div>
 
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-6 bg-dark p-2 justify-content-around">
-                <a [href]="profileLinks.url" target="_blank" *ngFor="let profileLinks of contactProfile.profile"
-                    class="btn btn-primary mx-4">
-                    <img [title]="profileLinks.name" [src]="profileLinks.iconUrl" [alt]="profileLinks.name"
-                        class="img-fluid">
-                    <span class="d-none d-block text-white">{{profileLinks.name}}</span>
-                </a>
+            <a [href]="profileLinks.url" class="btn btn-primary-outline" target="_blank" *ngFor="let profileLinks of contactProfile.profile">
+                <img [title]="profileLinks.name" [src]="profileLinks.iconUrl" [alt]="profileLinks.name"
+                    class="img-fluid">
+                <span class="d-none d-block text-white">{{profileLinks.name}}</span>
+            </a>
         </div>
         <div class="col-md-2 bg-dark p-2 justify-content-center">
             <div class="p-1">
                 <ng-template #popTemplate>I don´t even use instagram :)</ng-template>
-                <button type="button"  class="btn btn-primary text-center" [popover]="popTemplate" popoverTitle="Just Kidding" placement="top">
+                <button type="button" class="btn btn-primary-outline text-center" [popover]="popTemplate"
+                    popoverTitle="Just Kidding" placement="top">
                     <img [title]="Instagram.name" [src]="Instagram.iconUrl" [alt]="Instagram.name" class="img-fluid">
                     <span class="d-none d-block text-white">{{Instagram.name}}</span>
                 </button>
@@ -29,20 +33,20 @@
 
     <div class="row justify-content-center">
         <div class="col-md-3 bg-dark text-white p-2 justify-content-center">
-            <div class="d-flex flex-column justify-content-center align-items-center p-1">
-                <a [href]="email.url" target="_blank" class="btn btn-primary  text-center">
+            <div class="d-flex flex-column">
+                <a [href]="email.url" target="_blank" class="btn btn-primary-outline">
                     <img [title]="email.name" [src]="email.iconUrl" [alt]="email.name" class="img-fluid">
+                    <span class="d-none d-block text-white">{{email.url.replace('mailto:', '')}}</span>
                 </a>
-                <span class="d-none d-block">{{email.url.replace('mailto:', '')}}</span>
             </div>
         </div>
         <div class="col-md-5 bg-dark text-white p-2 justify-content-center">
-            <div class="p-1">
+            <div class="d-flex flex-row justify-content-center align-items-center p-1">
                 <a [href]="workProfile.url" target="_blank" *ngFor="let workProfile of contactProfile.work"
-                    class="btn btn-primary mx-4">
+                    class="btn btn-primary-outline mx-4">
                     <img [title]="workProfile.name" [src]="workProfile.iconUrl" [alt]="workProfile.name"
                         class="img-fluid">
-                    <span class="d-none d-block">{{workProfile.name}}</span>
+                    <span class="d-none d-block text-white">{{workProfile.name}}</span>
                 </a>
             </div>
         </div>

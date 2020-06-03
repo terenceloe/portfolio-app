@@ -1,4 +1,14 @@
 .bg-dark {
     border: 1px solid black;
     display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mat-title {
+    font-size: 40px;
+}
+
+.btn-primary-outline {
+    background-color: transparent;
 }

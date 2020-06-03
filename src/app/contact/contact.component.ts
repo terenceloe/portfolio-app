@@ -14,17 +14,17 @@ export class ContactComponent implements OnInit {
       {
         name: 'Facebook',
         url: 'https://www.facebook.com/terence.loe.9',
-        iconUrl: './assets/icons/facebook.svg'
+        iconUrl: './assets/icons/icons8-facebook.svg'
       },
       {
         name: 'Twitter',
         url: 'https://www.twitter.com',
-        iconUrl: './assets/icons/twitter.svg'
+        iconUrl: './assets/icons/icons8-twitter.svg'
       },
       {
         name: 'LinkedIn',
         url: 'https://www.linkedin.com/in/terrence-loe-4823b6196/',
-        iconUrl: './assets/icons/linkedin.svg'
+        iconUrl: './assets/icons/icons8-linkedin.svg'
       }
     ],
     work: [
@@ -50,7 +50,7 @@ export class ContactComponent implements OnInit {
   Instagram = {
     name: 'Instagram',
     url: '',
-    iconUrl: './assets/icons/insta.svg'
+    iconUrl: './assets/icons/icons8-instagram.svg'
   }
   
   ngOnInit(): void {

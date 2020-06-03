@@ -10,10 +10,10 @@ import { SelectButtonComponent } from '../select-button/select-button.component'
   declarations: [
     ProjectCardComponent,
     ProjectsComponent,
-    SelectButtonComponent
+    SelectButtonComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
   ],
   exports: [
     ProjectsComponent

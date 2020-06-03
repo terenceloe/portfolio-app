@@ -3,7 +3,6 @@ import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from "@angular/flex-layout";
 
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
@@ -16,13 +15,11 @@ import { ContactComponent } from './contact/contact.component';
 import { SkillsService } from './services/skills.service';
 import { GenericModule } from './generic/generic.module';
 import { GenericTagService } from './generic/services/generic-tag.service';
-import { ModalModule, BsModalRef } from 'ngx-bootstrap/modal';
 import { PopoverModule } from 'ngx-bootstrap/popover';
 import { FooterComponent } from './footer/footer.component';
 import { MaterialModule } from './material.module';
 import { SidenavListComponent } from './navbar/sidenav-list/sidenav-list.component';
-
-
+import { DialogContent } from './project-card/project-card.component';
 
 
 @NgModule({
@@ -36,22 +33,22 @@ import { SidenavListComponent } from './navbar/sidenav-list/sidenav-list.compone
     ContactComponent,
     FooterComponent,
     SidenavListComponent,
+    DialogContent
   ],
+  entryComponents: [DialogContent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     GenericModule,
-    ModalModule.forRoot(),
     PopoverModule.forRoot(),
     MaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
   ],
   providers: [
     ProjectDataService,
     SkillsService,
     GenericTagService,
-    BsModalRef
   ],
   bootstrap: [AppComponent]
 })

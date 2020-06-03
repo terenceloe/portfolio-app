@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>{{data?.project?.name}}</h1>
+<mat-dialog-content >
+    <h2 >{{ data?.project?.description }}</h2>
+    <div *ngIf="data?.project?.projectLink">
+        <p class="lead">
+            <strong>Project Link: </strong>
+            <a [href]="data?.project?.projectLink" target="_blank">{{data?.project?.projectLink}}</a>
+        </p >
+    </div>
+    <div class="mb-4" *ngIf="data?.project?.liveUrl">
+        <p class="lead">
+            <strong>Live Url: </strong>
+            <a [href]="data?.project?.liveUrl" target="_blank">{{data?.project?.liveUrl}}</a>
+        </p>
+    </div>
+    <div class="mb-4" *ngIf="data?.project?.techStuff && data?.project?.techStuff.length > 0">
+        <p class="lead">
+            <strong>Tech Stuff: </strong>
+            <li class="my-1" *ngFor="let tech of data?.project?.techStuff">{{ tech }}</li>
+        </p>
+    </div>
+    <div *ngIf="data?.project?.features && data?.project?.features.length > 0">
+        <p class="lead">
+            <strong>Features: </strong>
+            <li class="my-1" *ngFor="let features of data?.project?.features">{{ features }}</li>
+        </p>
+    </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Close</button>
+</mat-dialog-actions>
