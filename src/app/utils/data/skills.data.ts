@@ -10,19 +10,19 @@ export const SKILLS_DATA: ISkill[] = [
     {
         type: 'Backend',
         names: [
-            'Node.js'
+            'Node.js & Express', 'Firebase'
         ]
     },
     {
         type: 'Frontend',
         names: [
-            'HTML5', 'CSS3', 'jQuery', 'Angular'
+            'MEAN', 'HTML5', 'CSS3', 'jQuery', 'REST API'
         ]
     },
     {
         type: 'Database & ORM',
         names: [
-            'SQL Database',
+            'SQL, NoSQL, MongoDB',
         ]
     },
     {

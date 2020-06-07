@@ -1,8 +1,9 @@
 .image{
-    height:68em;
-    background-size:cover; 
-    width:auto;
     background-image:url('src\assets\img\bg-pink.jpg');
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
   }
   
   mat-sidenav-container, mat-sidenav-content, mat-sidenav {

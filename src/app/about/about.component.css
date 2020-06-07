@@ -3,3 +3,7 @@
     width: 100px;
     border: 2px solid white;
 }
+
+mat-card {
+    background-color: #34ebd8;
+}
