@@ -4,9 +4,8 @@
                 <h1>CONTACT & PROFILES</h1>
             </div>
     </div> -->
-    <div class="mb-4" fxLayout="row" fxLayoutAlign="center center">
+    <div class="my-5" fxLayout="row" fxLayoutAlign="center center">
         <h2 class="mat-title">CONTACT & PROFILES</h2>
-
     </div>
 </div>
 
@@ -32,20 +31,17 @@
     </div>
 
     <div class="row justify-content-center">
-        <div class="col-md-3 bg-dark text-white p-2 justify-content-center">
-            <div class="d-flex flex-column">
+        <div class="col-md-3 bg-dark text-white p-2">
                 <a [href]="email.url" target="_blank" class="btn btn-primary-outline">
                     <img [title]="email.name" [src]="email.iconUrl" [alt]="email.name" class="img-fluid">
                     <span class="d-none d-block text-white">{{email.url.replace('mailto:', '')}}</span>
                 </a>
-            </div>
         </div>
         <div class="col-md-5 bg-dark text-white p-2 justify-content-center">
             <div class="d-flex flex-row justify-content-center align-items-center p-1">
                 <a [href]="workProfile.url" target="_blank" *ngFor="let workProfile of contactProfile.work"
                     class="btn btn-primary-outline mx-4">
-                    <img [title]="workProfile.name" [src]="workProfile.iconUrl" [alt]="workProfile.name"
-                        class="img-fluid">
+                    <img [title]="workProfile.name" [src]="workProfile.iconUrl" [alt]="workProfile.name" class="img-fluid">
                     <span class="d-none d-block text-white">{{workProfile.name}}</span>
                 </a>
             </div>

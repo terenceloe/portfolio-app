@@ -20,6 +20,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MaterialModule } from './material.module';
 import { SidenavListComponent } from './navbar/sidenav-list/sidenav-list.component';
 import { DialogContent } from './project-card/project-card.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { DialogContent } from './project-card/project-card.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     AppRoutingModule,
     GenericModule,
     PopoverModule.forRoot(),

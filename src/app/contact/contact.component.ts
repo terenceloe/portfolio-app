@@ -36,7 +36,7 @@ export class ContactComponent implements OnInit {
       {
         name: 'Stackoverflow',
         url: 'https://stackoverflow.com/users/13180358/terenceloe',
-        iconUrl: './assets/icons/icons8-stack-overflow.svg'
+        iconUrl: './assets/icons/icons8-stack-overflow-64.svg'
       },
     ]
   };

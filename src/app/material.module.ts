@@ -6,12 +6,13 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatListModule } from '@angular/material/list';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatCardModule } from '@angular/material/card';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 
 
 @NgModule({
-    imports: [MatSidenavModule, MatToolbarModule, MatIconModule, MatButtonModule, MatListModule, MatDialogModule, MatCardModule],
-    exports: [MatSidenavModule, MatToolbarModule, MatIconModule, MatButtonModule, MatListModule, MatDialogModule, MatCardModule],
+    imports: [MatSidenavModule, MatToolbarModule, MatIconModule, MatButtonModule, MatListModule, MatDialogModule, MatCardModule, MatTooltipModule],
+    exports: [MatSidenavModule, MatToolbarModule, MatIconModule, MatButtonModule, MatListModule, MatDialogModule, MatCardModule, MatTooltipModule],
 })
 
 export class MaterialModule { }

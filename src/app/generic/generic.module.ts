@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ProjectsComponent } from 'src/app/projects/projects.component';
 import { ProjectCardComponent } from '../project-card/project-card.component';
 import { SelectButtonComponent } from '../select-button/select-button.component';
+import { MaterialModule } from '../material.module';
 
 
 
@@ -14,6 +15,7 @@ import { SelectButtonComponent } from '../select-button/select-button.component'
   ],
   imports: [
     CommonModule,
+    MaterialModule
   ],
   exports: [
     ProjectsComponent
