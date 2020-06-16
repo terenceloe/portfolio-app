@@ -6,6 +6,7 @@ import { testUniqueness } from './utils';
 import { IProject } from './IProject';
 import { PortfolioData } from './data/portfolio.data';
 import { FitnessTrackerData } from "./data/fitness-tracker.data";
+import { MymessageData } from './data/mymessage.data';
 
 const getAllProject = () => {
     const projects = [
@@ -13,7 +14,8 @@ const getAllProject = () => {
         CrudJavaData,
         ClientpanelData,
         PortfolioData,  
-        FitnessTrackerData  
+        FitnessTrackerData,
+        MymessageData
     ];
 
     if (!environment.production) {
