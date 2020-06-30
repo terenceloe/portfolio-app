@@ -1,48 +1,12 @@
-<!-- <div class="row">
-    <div class="col-sm-5 offset-sm-1">
-        <h1 class="text-secondary text-center my-2">
+<div class="mb-5" fxLayout="row" fxLayoutAlign="center" fxLayoutGap.xs="30px" fxLayoutGap.gt-xs="50px">
+    <div fxFlex="40">
+        <h1 class="mat-display-2 text-secondary text-center my-2">
             <u><em>ABOUT</em></u>
         </h1>
         <div class="text-center py-1">
             <img src="../../assets/img/selfie_edited.jpg" alt="" class="img-fluid center-block my-2" width="">
         </div>
-        <p class="lead text-center text-dark my-2">
-            I started programming with java as my first programming language in the University, nevertheless the
-            interest to learn programming came later and i decided to learn HTML, Javascript to build some awesome
-            websites. I am currently passionate to learn Frontend web development and working with Angular.
-        </p>
-        <br>
-        <p class="lead text-center text-dark my-2">Apart from web development, i like to watch movies and i love dogs!
-        </p>
-    </div>
-    <div class="col-sm-5">
-        <h1 class="text-secondary text-center my-2">
-            <u><em>SKILLS</em></u>
-        </h1>
-        <div *ngFor="let skill of skills">
-            <ul class="list-group my-2 text-center text-white">
-                <li class="list-group-item font-weight-bold bg-primary">
-                    {{skill.type}} :
-                    <br>
-                    <ul class="list-group my-2">
-                        <li class="list-group-item font-italic bg-primary">
-                            {{skill.names.join(', ')}}
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-</div> -->
-
-<div fxLayout="row" fxLayoutAlign="center" fxLayoutGap.xs="30px" fxLayoutGap.gt-xs="100px">
-    <div fxFlex="40" fxFlex.gt-md="30">
-        <h1 class="text-secondary text-center my-2">
-            <u><em>ABOUT</em></u>
-        </h1>
-        <div class="text-center py-1">
-            <img src="../../assets/img/selfie_edited.jpg" alt="" class="img-fluid center-block my-2" width="">
-        </div>
+        <div>
         <p class="lead text-center text-dark my-1">
             I started programming with java as my first programming language in the University, nevertheless the
             interest to learn programming came later and i decided to learn HTML, Javascript to build some awesome
@@ -51,30 +15,12 @@
         <br>
         <p class="lead text-center text-dark my-1">Apart from web development, i like to watch movies and i love dogs!
         </p>
+        </div>
     </div>
-    <div fxFlex="40" fxFlex.gt-md="30">
-        <h1 class="text-secondary text-center my-2">
+    <div fxFlex="40">
+        <h1 class="mat-display-2 text-secondary text-center my-2">
             <u><em>SKILLS</em></u>
         </h1>
-        <!-- <div *ngFor="let skill of skills">
-            <ul class="list-group my-2 text-center text-white">
-                <li class="list-group-item font-weight-bold bg-primary">
-                    {{skill.type}} :
-                    <br>
-                    <ul class="list-group my-2">
-                        <li class="list-group-item font-italic bg-primary">
-                            {{skill.names.join(', ')}}
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        </div> -->
-        <!-- <mat-list class="text-center">
-            <mat-list-item *ngFor="let skill of skills">
-                <h3 matLine>{{skill.type}}</h3>
-                <p matLine>{{skill.names.join(', ')}}</p>
-            </mat-list-item>
-        </mat-list> -->
         <mat-card class="text-center my-3" *ngFor="let skill of skills">
             <mat-card-title>{{skill.type}}</mat-card-title>
             <mat-card-content>

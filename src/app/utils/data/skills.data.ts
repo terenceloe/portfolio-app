@@ -16,7 +16,7 @@ export const SKILLS_DATA: ISkill[] = [
     {
         type: 'Frontend',
         names: [
-            'MEAN', 'HTML5', 'CSS3', 'jQuery', 'REST API'
+            'MEAN Stack', 'HTML5', 'CSS3', 'jQuery', 'REST API'
         ]
     },
     {
